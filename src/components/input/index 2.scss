@@ -1,0 +1,91 @@
+.input_group{
+    align-items: flex-start;
+    display: flex;
+    flex: 1 1 auto;
+    font-size: 16px;
+    letter-spacing: normal;
+    max-width: 100%;
+    text-align: left;
+    padding-top: 12px;
+    margin-top: 4px;
+    .input_control{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        min-width: 0;
+        width: 100%;
+        .input_slot{
+            align-items: center;
+            color: inherit;
+            display: flex;
+            margin-bottom: 8px;
+            min-height: inherit;
+            position: relative;
+            width: 100%;
+            &::before,&::after{
+                border: 1px solid;
+                bottom: -1px;
+                content: "";
+                left: 0;
+                position: absolute;
+                transition: .3s cubic-bezier(.25,.8,.5,1);
+                width: 100%;
+                border-color: currentcolor;
+            }
+            &::after{
+                border: 1px solid ;
+                transform: scaleX(0);
+            }
+        }
+        .input_detail{
+            display: flex;
+            flex: 1 0 auto;
+            max-width: 100%;
+            overflow: hidden;
+        }
+    }
+}
+.input_group.focus{
+    color: #1867c0;
+    .input_slot{
+        &::after{
+            transform: scaleX(1);
+        }
+    }
+    .text_field{
+        label{
+            transform: translateY(-18px) scale(.75);
+            color: #1867c0;
+        }
+    }
+}
+.text_field{
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+    label{
+        left: 0px;
+        right: auto;
+        position: absolute;
+        max-width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        top: 6px;
+        white-space: nowrap;
+        pointer-events: none;
+        transform-origin: top left;
+        color: rgba(0,0,0,.6);
+        font-size: 16px;
+        transition: .3s cubic-bezier(.25,.8,.5,1);
+    }
+    input{
+        flex: 1 1 auto;
+        line-height: 20px;
+        padding: 8px 0;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+    }
+}
