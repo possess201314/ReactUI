@@ -1,0 +1,22 @@
+.Le_radio_ui{
+    position: relative;
+    label{
+        width: 100%;
+        left: 0px;
+        right: auto;
+        position: absolute;
+        // overflow: hidden;
+        text-overflow: ellipsis;
+        top: 6px;
+        white-space: nowrap;
+        pointer-events: none;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 16px;
+    }
+    input{
+        border: none;
+        flex: 1 1 auto;
+        line-height: 20px;
+        padding: 8px 0;
+    }
+}
